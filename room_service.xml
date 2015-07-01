@@ -2,38 +2,41 @@
 <manifest>
 
     <!-- Github remote -->
-    <remote name="github" fetch="https://github.com/" />
+    <remote name="github" fetch="https://github.com/" revision="lollipop" />
 
     <!--Self update this manifest-->
-    <project path=".repo/local_manifests" name="AOSP-Shamu/local_manifests" remote="github" revision="lollipop">
+    <project path=".repo/local_manifests" name="AOSP-Shamu/local_manifests" remote="github">
       <copyfile src="room_service.xml" dest="room_service.xml" />
     </project>
 
     <!-- Build -->
     <remove-project path="build" name="platform/build" />
-    <project path="build" name="AOSP-Shamu/platform_build" remote="github" revision="lollipop">
+    <project path="build" name="AOSP-Shamu/platform_build" remote="github">
       <copyfile src="core/root.mk" dest="Makefile" />
     </project>
 
     <!-- frameworks_base -->
     <remove-project path="frameworks/base" name="platform/frameworks/base" />
-    <project path="frameworks/base" name="AOSP-Shamu/platform_frameworks_base" remote="github" revision="lollipop" />
+    <project path="frameworks/base" name="AOSP-Shamu/platform_frameworks_base" remote="github" />
 
     <!-- system_core -->
     <remove-project path="system/core" name="platform/system/core" groups="pdk" />
-    <project path="system/core" name="AOSP-Shamu/platform_system_core" remote="github" revision="lollipop" />
+    <project path="system/core" name="AOSP-Shamu/platform_system_core" remote="github" />
 
     <!-- browser -->
     <remove-project path="packages/apps/Browser" name="platform/packages/apps/Browser" />
-    <project path="packages/apps/Browser" name="AOSP-Shamu/platform_packages_apps_browser" remote="github" revision="lollipop" />
+    <project path="packages/apps/Browser" name="AOSP-Shamu/platform_packages_apps_browser" remote="github" />
 
     <!-- device_moto_shamu -->
     <remove-project path="device/moto/shamu" name="device/moto/shamu" />
-    <project path="device/moto/shamu" name="AOSP-Shamu/platform_device_moto_shamu" remote="github" revision="lollipop" />
+    <project path="device/moto/shamu" name="AOSP-Shamu/platform_device_moto_shamu" remote="github"/>
 
-    <!-- Muppets proprietary files -->
-    <project path="vendor/moto" name="TAOSP-Shamu/platform_vendor_moto_shamu" remote="github" revision="master" />
+    <!-- Proprietary files -->
+    <project path="vendor/moto" name="AOSP-Shamu/platform_vendor_moto_shamu" remote="github" />
 
     <!-- OTA Updater -->
     <project path="packages/apps/OTAUpdates" name="MatthewBooth/OTAUpdates" remote="github" revision="aosp" />
+
+    <!--AOSP Vendor -->
+    <project path="vendor/aosp" name="AOSP-Shamu/platform_vendor_aosp" remote="github" />
 </manifest>
