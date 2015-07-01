@@ -30,4 +30,10 @@
     <!-- device_moto_shamu -->
     <remove-project path="device/moto/shamu" name="device/moto/shamu" />
     <project path="device/moto/shamu" name="AOSP-Shamu/platform_device_moto_shamu" remote="github" revision="lollipop" />
+
+    <!-- Muppets proprietary files -->
+    <project path="vendor/moto" name="TheMuppets/proprietary_vendor_motorola" remote="github" revision="cm-12.1" />
+
+    <!-- OTA Updater -->
+    <project path="packages/apps/OTAUpdates" name="MatthewBooth/OTAUpdates" remote="github" revision="aosp" />
 </manifest>
