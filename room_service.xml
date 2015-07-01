@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Github remote -->
+  <remote name="github" fetch="https://github.com/" />
+
+  <!--Self update this manifest-->
+  <project path=".repo/local_manifests" name="AOSP-Shamu/local_manifests" remote="github" revision="lollipop">
+    <copyfile src="room_service.xml" dest="room_service.xml" />
+  </project>
+  <!-- Build -->
+  <remove-project path="build" name="platform/build" />
+  <project path="build" name="AOSP-Shamu/platform_build" remote="github" revision="lollipop">
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+
+    <!-- frameworks_base -->
+    <remove-project path="frameworks/base" name="platform/frameworks/base" />
+    <project path="frameworks/base" name="AOSP-Shamu/platform_frameworks_base" remote="github" revision="lollipop" />
+
+    <!-- system_core -->
+    <remove-project path="system/core" name="platform/system/core" groups="pdk" />
+    <project path="system/core" name="AOSP-Shamu/platform_system_core" remote="github" revision="lollipop" />
+
+    <!-- browser -->
+    <remove-project path="packages/apps/Browser" name="platform/packages/apps/Browser" />
+    <project path="packages/apps/Browser" name="AOSP-Shamu/platform_packages_apps_browser" remote="github" revision="lollipop" />
+
+    <!-- device_moto_shamu -->
+    <remove-project path="device/moto/shamu" name="device/moto/shamu" />
+    <project path="device/moto/shamu" name="AOSP-Shamu/platform_device_moto_shamu" remote="github" revision="lollipop" />
+</manifest>
