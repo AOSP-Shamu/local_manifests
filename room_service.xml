@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <!--Self update this manifest-->
-  <project path=".repo/local_manifests" name="AOSP-Shamu/local_manifests" remote="github" revision="lollipop">
-    <copyfile src="room_service.xml" dest="room_service.xml" />
-  </project>
+    <!-- Github remote -->
+    <remote name="github" fetch="https://github.com/" />
 
-  <!-- Github remote -->
-  <remote name="github" fetch="https://github.com/" />
+    <!--Self update this manifest-->
+    <project path=".repo/local_manifests" name="AOSP-Shamu/local_manifests" remote="github" revision="lollipop">
+      <copyfile src="room_service.xml" dest="room_service.xml" />
+    </project>
 
-  <!-- Build -->
-  <remove-project path="build" name="platform/build">
-  <project path="build" name="AOSP-Shamu/platform_build" remote="github" revision="lollipop" >
+    <!-- Build -->
+    <remove-project path="build" name="platform/build" />
+    <project path="build" name="AOSP-Shamu/platform_build" remote="github" revision="lollipop">
       <copyfile src="core/root.mk" dest="Makefile" />
     </project>
 
