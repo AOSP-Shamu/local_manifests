@@ -62,9 +62,12 @@
 
     <!-- Recovery -->
     <remove-project path="bootable/recovery" name="platform/bootable/recovery" />
-    <project path="bootable/recovery" name="omnirom/android_bootable_recovery" remote="github" revision="android-5.1" />
+    <project path="bootable/recovery" name="AOSP-Shamu/android_bootable_recovery" remote="github" />
 
     <!-- libtar -->
     <project name="CyanogenMod/android_external_libtar" path="external/libtar" remote="github" revision="cm-12.1" />
+
+    <!-- busybox -->
+    <project name="omnirom/android_external_busybox" path="external/busybox" remote="github" revision="android-5.1" />
 
 </manifest>
