@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-    <!-- Github remote -->
+        <!-- Github remote -->
     <remote name="github" fetch="https://github.com/" revision="lollipop" />
 
     <!--Self update this manifest-->
@@ -69,5 +69,26 @@
 
     <!-- busybox -->
     <project name="omnirom/android_external_busybox" path="external/busybox" remote="github" revision="android-5.1" />
+
+    <!-- Kernel -->
+    <project name="AOSP-Shamu/platform_kernel_moto_shamu" path="kernel/moto/shamu" remote="github" />
+
+    <!-- Remove unneeded device files -->
+    <remove-project path="device/asus/deb" name="device/asus/deb" />
+    <remove-project path="device/asus/flo" name="device/asus/flo" />
+    <remove-project path="device/asus/flo-kernel" name="device/asus/flo-kernel" />
+    <remove-project path="device/asus/fugu" name="device/asus/fugu" />
+    <remove-project path="device/asus/fugu-kernel" name="device/asus/fugu-kernel" />
+    <remove-project path="device/asus/grouper" name="device/asus/grouper" />
+    <remove-project path="device/asus/tilapia" name="device/asus/tilapia" />
+    <remove-project path="device/google/atv" name="device/google/atv" />
+    <remove-project path="device/htc/flounder" name="device/htc/flounder" />
+    <remove-project path="device/htc/flounder-kernel" name="device/htc/flounder-kernel" />
+    <remove-project path="device/lge/hammerhead" name="device/lge/hammerhead" />
+    <remove-project path="device/lge/hammerhead-kernel" name="device/lge/hammerhead-kernel" />
+    <remove-project path="device/lge/mako" name="device/lge/mako" />
+    <remove-project path="device/lge/mako-kernel" name="device/lge/mako-kernel" />
+    <remove-project path="device/moto/shamu-kernel" name="device/moto/shamu-kernel" />
+    <remove-project path="device/samsung/manta" name="device/samsung/manta" />
 
 </manifest>
