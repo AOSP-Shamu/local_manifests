@@ -63,10 +63,6 @@
     <!-- Kernel -->
     <project name="AOSP-Shamu/platform_kernel_moto_shamu" path="kernel/moto/shamu" remote="github" />
 
-    <!-- F2FS -->
-    <remove-project path="system/vold" name="platform/system/vold" />
-    <project path="system/vold" name="AOSP-JF/platform_system_vold" groups="pdk" remote="github" revision="aosp-5.1" />
-
     <!-- Remove unneeded device files -->
     <remove-project path="device/asus/deb" name="device/asus/deb" />
     <remove-project path="device/asus/flo" name="device/asus/flo" />
