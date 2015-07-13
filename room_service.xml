@@ -64,8 +64,6 @@
     <project name="AOSP-Shamu/platform_kernel_moto_shamu" path="kernel/moto/shamu" remote="github" />
 
     <!-- F2FS -->
-    <project path="external/e2fsprogs" name="AOSP-JF/platform_external_e2fsprogs" groups="pdk" remote="github" revision="aosp-5.1" />
-    <project path="external/f2fs-tools" name="CyanogenMod/android_external_f2fs-tools" groups="pdk" remote="github" revision="cm-12.1" />
     <remove-project path="system/vold" name="platform/system/vold" />
     <project path="system/vold" name="AOSP-JF/platform_system_vold" groups="pdk" remote="github" revision="aosp-5.1" />
 
