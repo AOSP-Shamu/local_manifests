@@ -60,16 +60,6 @@
     <remove-project path="packages/apps/Dialer" name="platform/packages/apps/Dialer" />
     <project path="packages/apps/Dialer" name="AOSP-Shamu/platform_packages_apps_Dialer" remote="github"/>
 
-    <!-- Recovery -->
-    <remove-project path="bootable/recovery" name="platform/bootable/recovery" />
-    <project path="bootable/recovery" name="AOSP-Shamu/android_bootable_recovery" remote="github" />
-
-    <!-- libtar -->
-    <project name="CyanogenMod/android_external_libtar" path="external/libtar" remote="github" revision="cm-12.1" />
-
-    <!-- busybox -->
-    <project name="omnirom/android_external_busybox" path="external/busybox" remote="github" revision="android-5.1" />
-
     <!-- Kernel -->
     <project name="AOSP-Shamu/platform_kernel_moto_shamu" path="kernel/moto/shamu" remote="github" />
 
